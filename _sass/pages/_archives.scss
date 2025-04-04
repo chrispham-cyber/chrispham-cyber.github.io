@@ -19,7 +19,7 @@
     width: $timeline-width;
     position: relative;
     float: left;
-    background-color: var(--timeline-color);
+    background-color: #108000;
   }
 
   .year {
@@ -132,7 +132,7 @@
       float: left;
       top: 1.35rem;
       left: 71px;
-      background-color: var(--timeline-node-bg);
+      background-color: #20ff00;
       box-shadow: 0 0 3px 0 #c2c6cc;
       z-index: 1;
     }
