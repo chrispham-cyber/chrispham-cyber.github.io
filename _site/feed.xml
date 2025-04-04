@@ -1,0 +1,95 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>Heland</title>
+  <subtitle>These are some of my cybersecurity practice projects! I am upgrading my skills to dive into the technology field.</subtitle>
+  <updated>2025-04-04T12:45:00-04:00</updated>
+  <author>
+    <name>Thanh Pham (Chris)</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
+  <rights> © 2025 Thanh Pham (Chris) </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Keylogger</title>
+    <link href="http://localhost:4000/posts/keylogger/" rel="alternate" type="text/html" title="Keylogger" />
+    <published>2024-06-02T19:30:00-04:00</published>
+  
+    <updated>2024-06-02T19:30:00-04:00</updated>
+  
+    <id>http://localhost:4000/posts/keylogger/</id>
+    <content type="text/html" src="http://localhost:4000/posts/keylogger/" />
+    <author>
+      <name>Thanh Pham (Chris)</name>
+    </author>
+
+  
+    
+    <category term="tools" />
+    
+  
+
+  <summary>Overview This project is a keystroke logger that captures and records the keys pressed on the keyboard, logging them into a file named keystrokes.log. It processes each key press event to handle specific actions, such as backspace, special characters, and modifier keys (Ctrl, Shift, Alt), and writes the corresponding character to a log file.  This project is useful for purposes such as creating...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>OWASP - Juice Shop</title>
+    <link href="http://localhost:4000/posts/owasp-juice-shop/" rel="alternate" type="text/html" title="OWASP - Juice Shop" />
+    <published>2024-03-01T17:30:00-05:00</published>
+  
+    <updated>2024-03-01T17:30:00-05:00</updated>
+  
+    <id>http://localhost:4000/posts/owasp-juice-shop/</id>
+    <content type="text/html" src="http://localhost:4000/posts/owasp-juice-shop/" />
+    <author>
+      <name>Thanh Pham (Chris)</name>
+    </author>
+
+  
+    
+    <category term="OWASP" />
+    
+  
+
+  <summary>Overview This project is a great resource for who looking to gain hands-on experience with web application security concepts and tools, covering a wide range of vulnerabilities such as SQL injection, Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF), and more. It offers challenges of varying difficulty levels, making it suitable for beginners as well as more experienced security pro...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Gophish - Email Phishing</title>
+    <link href="http://localhost:4000/posts/gophish/" rel="alternate" type="text/html" title="Gophish - Email Phishing" />
+    <published>2024-02-17T17:30:00-05:00</published>
+  
+    <updated>2024-02-17T17:30:00-05:00</updated>
+  
+    <id>http://localhost:4000/posts/gophish/</id>
+    <content type="text/html" src="http://localhost:4000/posts/gophish/" />
+    <author>
+      <name>Thanh Pham (Chris)</name>
+    </author>
+
+  
+    
+    <category term="tools" />
+    
+  
+
+  <summary>📜WHAT IS GOPHISH?📜  Gophish is a powerful, open-source phishing simulation tool that allows security professionals and organizations to create, manage, and track phishing campaigns. It provides a user-friendly interface for designing phishing emails and landing pages, making it accessible even for those with limited technical expertise. Gophish is primarily used for:  Security Awareness Trainin...</summary>
+
+  </entry>
+
+</feed>
+
+
