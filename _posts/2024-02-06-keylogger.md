@@ -4,6 +4,8 @@ title:  "Keylogger"
 date:   2024-06-02 18:30:00 -0500
 categories: tools
 tags: writeup source-code python tools
+image:
+  path: /assets/img/keylogger/keylogger-guide.jpg
 ---
 
 ## Overview
