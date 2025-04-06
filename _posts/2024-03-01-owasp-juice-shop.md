@@ -3,7 +3,7 @@ layout: post
 title:  "OWASP - Juice Shop"
 date:   2024-03-01 18:30:00 -0400
 categories: OWASP
-tags: OWASP web 
+tags: web 
 image:
   path: /assets/img/owasp/banner.jpg
 ---

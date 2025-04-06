@@ -3,7 +3,7 @@ layout: post
 title:  "Keylogger"
 date:   2024-06-02 18:30:00 -0500
 categories: tools
-tags: writeup source-code python tools
+tags: writeup source-code python 
 image:
   path: /assets/img/keylogger/keylogger-guide.jpg
 ---
@@ -93,5 +93,5 @@ To view the log, using
 cat keystrokes.log
 ```
 
-## Warning
-**Keystroke logging can be intrusive and potentially violate privacy**. So it should be used responsibly and ethically.
+> *Warning*: Keystroke logging can be intrusive and potentially violate privacy. So it should be used responsibly and ethically.
+{: .prompt-danger }
