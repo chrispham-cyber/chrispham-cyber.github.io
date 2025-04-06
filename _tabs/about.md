@@ -9,5 +9,7 @@ I started this blog as a way to document my experiences, challenges, and discove
 
 # Achievements
 🦈 Dean's List 2024 (Spring - Summer - Fall)
+
 🏆 Winner of FlagOps INIT at FIU 2025
+
 🥉 3rd Place in Hack The Flag ISSA 2024
