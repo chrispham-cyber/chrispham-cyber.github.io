@@ -17,7 +17,7 @@ Register your account, *Note*: upload profile picture.
 After having your account, we will match all of them and go to match page.
 ![](assets/img/htb/onlyhacks/match.png)
 Click on `Renata` chatbox to see her `rid`
-![](asses/img/htb/onlyhacks/chat.png)
+![](assets/img/htb/onlyhacks/chat.png)
 Change `rid` value to get the flag! 
 
 Good luck!

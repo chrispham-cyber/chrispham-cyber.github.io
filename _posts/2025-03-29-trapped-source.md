@@ -12,4 +12,4 @@ Go to the website, we can see that it requires us to input pin code. Inspect the
 Go to the `script`, we can see the data type is `json` and directory is `/flag` and web's method `POST`
 ![](assets/img/htb/trapped source/2.png)
 Using `BurpSuite` to change something and we got the flag.
-![](assets/img/htb/trapped souce/3.png)
+![](assets/img/htb/trapped source/3.png)

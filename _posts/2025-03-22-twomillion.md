@@ -29,7 +29,7 @@ Decrypt and get invite code.
 ![](assets/img/htb/twomillion/code.png)
 
 Using `BurpSuite` to check out endpoints that might return a list of endpoints.
-![](./img/htb/twonillion/api.png)
+![](assets/img/htb/twomillion/api.png)
 
 After checking endpoints, we can change the role of our account and inject vulnerable command to `/api/v1/admin/vpn/generate`
 ![](assets/img/htb/twomillion/update.png)
@@ -44,7 +44,7 @@ List all files, we can see the hidden file `env`, view the content we can get th
 ![](assets/img/htb/twomillion/flag.png)
 
 Mail on Linux system is typically stored in one of a few locations.
-![](assetes/img/htb/twomillion/mail.png)
+![](assets/img/htb/twomillion/mail.png)
 
 Search `CVE OverlayFS / FUSE` on Google, and we will get the payload file. Download and exploit.
 ![](assets/img/htb/twomillion/root.png)
