@@ -3,7 +3,7 @@ layout: post
 title:  "BabyEncryption"
 date:   2024-10-23 18:30:00 -0400
 categories: HTB-challenge crypto very-easy
-tags: HTB CTF writeup
+tags: HTB CTF writeup python
 ---
 
 ### CHALLENGE DESCRIPTION

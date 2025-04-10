@@ -3,7 +3,7 @@ layout: post
 title:  "Trapped Source"
 date:   2025-03-29 10:30:00 -0400
 categories: HTB-challenge web very-easy
-tags: HTB CTF writeup
+tags: HTB CTF writeup 
 ---
 
 ### SOLUTION

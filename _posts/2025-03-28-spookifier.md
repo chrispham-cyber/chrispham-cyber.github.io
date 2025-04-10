@@ -3,7 +3,7 @@ layout: post
 title:  "Spookifier"
 date:   2025-03-28 18:30:00 -0400
 categories: HTB-challenge web very-easy
-tags: HTB CTF writeup
+tags: HTB CTF writeup SSTI
 ---
 
 ### SOLUTION

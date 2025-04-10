@@ -3,7 +3,7 @@ layout: post
 title:  "Primed For Action"
 date:   2025-04-06 20:30:00 -0400
 categories: HTB-challenge misc very-easy
-tags: HTB CTF writeup
+tags: HTB CTF writeup python
 ---
 
 ### DESCRIPTION

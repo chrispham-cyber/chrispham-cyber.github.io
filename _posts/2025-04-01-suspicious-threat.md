@@ -3,7 +3,7 @@ layout: post
 title:  "Suspicious Threat"
 date:   2025-04-01 22:30:00 -0400
 categories: HTB-challenge forensics easy
-tags: HTB CTF writeup 
+tags: HTB CTF writeup library 
 ---
 
 ### CHALLENGE DESCRIPTION

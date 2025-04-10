@@ -3,7 +3,7 @@ layout: post
 title:  "Wrong Spooky Season"
 date:   2025-04-07 15:50:00 -0400
 categories: HTB-challenge forensics very-easy
-tags: HTB CTF writeup 
+tags: HTB CTF writeup wireshark base64 
 ---
 
 ### SOLUTION

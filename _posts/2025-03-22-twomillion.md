@@ -3,7 +3,7 @@ layout: post
 title:  "TwoMillion"
 date:   2025-03-22 18:30:00 -0400
 categories: HTB-machine linux easy
-tags: HTB CTF writeup 
+tags: HTB CTF writeup nmap msf 
 image:
     path: assets/img/htb/twomillion/banner.png
 ---

@@ -3,7 +3,7 @@ layout: post
 title:  "Extraterrestrial Persistence"
 date:   2025-04-07 15:40:00 -0400
 categories: HTB-challenge forensics very-easy
-tags: HTB CTF writeup 
+tags: HTB CTF writeup base64 
 ---
 
 ### SOLUTION
