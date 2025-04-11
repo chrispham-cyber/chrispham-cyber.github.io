@@ -3,7 +3,7 @@ layout: post
 title:  "Tangled Heist"
 date:   2025-04-08 14:00:00 -0400
 categories: HTB-challenge forensics easy
-tags: HTB CTF writeup wireshark log 
+tags: HTB CTF writeup wireshark log LDAP 
 ---
 
 ### SOLUTION
