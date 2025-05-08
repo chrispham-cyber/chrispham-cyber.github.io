@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "No Sql Injection"
-date:   2025-05-07 23:55:00 -0400
+date:   2025-05-07 23:57:00 -0400
 categories: PICO-challenge web medium 
 tags: pico CTF writeup sql-injection
 ---
