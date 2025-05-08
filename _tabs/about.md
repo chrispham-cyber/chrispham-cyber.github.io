@@ -13,3 +13,9 @@ I started this blog as a way to document my experiences, challenges, and discove
 🏆  Winner of FlagOps INIT at FIU 2025
 
 🥉  3rd Place in Hack The Flag ISSA 2024
+# Certifications
+ISC2 - CC – Certified in Cybersecurity - [Certificate: - 2025]()
+
+Codepath - Intermedia Cybersecurity - [Credential: 219886 - 2024](https://drive.google.com/file/d/1yQm0ELcAhqzJYg3GDKOjL8MBtrKTjrv2/view?usp=sharing)
+
+Google - Cybersecurity - [Credential: VG2VAD3AJEEX - 2023](https://drive.google.com/file/d/1FygBvxLnTAVakfteoXvAEF7CVVuZtYFs/view?usp=sharing)
