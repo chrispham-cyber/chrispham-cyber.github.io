@@ -4,8 +4,8 @@ title:  "OpSalwarKameez24-5: Bling-Bling"
 date:   2025-05-00 20:07:00 -0400
 categories: HTB-sherlock SOC easy
 tags: CTF writeup  
-image:
-    path: assets/img/htb/OpSalwarKameez24/banner.png
+#image:
+    #path: assets/img/htb/OpSalwarKameez24/banner.png
 ---
 
 ### CHALLENGE DESCRIPTION
