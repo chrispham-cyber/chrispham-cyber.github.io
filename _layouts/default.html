@@ -17,13 +17,16 @@ layout: compress
   {% include head.html %}
 
   <body>
+	<div id="google_translate_element"></div>
     {% include sidebar.html lang=lang %}
 
     <div id="main-wrapper" class="d-flex justify-content-center">
+
       <div class="container d-flex flex-column px-xxl-5">
         {% include topbar.html lang=lang %}
 
         <div class="row flex-grow-1">
+
           <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
             {% if layout.refactor or layout.layout == 'default' %}
               {% include refactor-content.html content=content lang=lang %}
@@ -47,6 +50,7 @@ layout: compress
         </div>
 
         <div class="row">
+
           <!-- tail -->
           <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
             {% for _include in layout.tail_includes %}
@@ -82,10 +86,12 @@ layout: compress
     {% endfor %}
 
     {% include_cached search-loader.html lang=lang %}
+
   </body>
+
 </html>
 
-<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) Analystic -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQ7VLRV853"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -98,3 +104,26 @@ layout: compress
 <script data-goatcounter="https://chrispham-cyber.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js">
 </script>
+
+<!-- Google Translate -->
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {
+		    pageLanguage: 'en',
+		    includedLanguages: 'en,es,vi,ru,fr,ja,ko,zh-CN',
+		    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+	    },
+            'google_translate_element'
+        );
+    }
+</script>
+<script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+	#google_translate_element {
+    		display: flex;
+    		justify-content: flex-end; /* Aligns to the right */
+	}
+</style>
+
