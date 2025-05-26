@@ -10,10 +10,12 @@ tags: pico CTF writeup postgre
 ![](assets/img/pico/SQL-Direct/1.png)
 
 ### SOLUTION 
-`psql -h saturn.picoctf.net -p 55291 -U postgres pico` to connect to server.
+```bash
+psql -h saturn.picoctf.net -p 55291 -U postgres pico #to connect to server.
 
-`\l` to show all databases
+{Back splash} l #to show all databases
 
-`\dt` to show all tables
+{Back splash} dt #to show all tables
 
-`select * from ...;` to get the flag.
+select * from ...; #to get the flag
+```

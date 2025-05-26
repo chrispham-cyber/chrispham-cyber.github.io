@@ -59,9 +59,9 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: G-JQ7VLRV853
+    id: #G-JQ7VLRV853
   goatcounter:
-    id: chrispham-cyber
+    id: #chrispham-cyber
   umami:
     id: # fill in your Umami ID
     domain: # fill in your Umami domain
@@ -75,7 +75,7 @@ analytics:
 
 # Page views settings
 pageviews:
-  provider: "goatcounter"
+  provider: #"goatcounter"
 
 # Prefer color scheme setting.
 #
