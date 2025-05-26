@@ -2,10 +2,10 @@
 layout: post
 title:  "Keylogger"
 date:   2024-06-02 18:30:00 -0500
-categories: tools
-tags: writeup source-code python 
+categories: Blog Tools
+tags: blog python 
 image:
-  path: /assets/img/keylogger/keylogger-guide.jpg
+  path: /assets/img/blog/keylogger/keylogger-guide.jpg
 ---
 
 ## Overview
@@ -14,7 +14,7 @@ This project is a **keystroke logger** that captures and records the keys presse
 This project is useful for purposes such as creating simple keystroke logging applications, debugging, or testing keyboard input behavior. 
 
 ## Demo
-![demo](./assets/img/keylogger/demo.gif)
+![demo](./assets/img/blog/keylogger/demo.gif)
 
 ## Source code
 ```bash

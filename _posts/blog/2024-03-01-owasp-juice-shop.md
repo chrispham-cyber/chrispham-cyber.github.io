@@ -2,17 +2,17 @@
 layout: post
 title:  "OWASP - Juice Shop"
 date:   2024-03-01 18:30:00 -0400
-categories: OWASP
-tags: web 
+categories: Blog 
+tags: blog web 
 image:
-  path: /assets/img/owasp/banner.jpg
+  path: /assets/img/blog/owasp/banner.jpg
 ---
 
 ### Overview
 This project is a great resource for who looking to gain hands-on experience with web application security concepts and tools, covering a wide range of vulnerabilities such as SQL injection, Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF), and more. It offers challenges of varying difficulty levels, making it suitable for beginners as well as more experienced security professionals.
 
 ### Catagory of vulnerabilities
-![](./assets/img/owasp/OWASP-categories.png)
+![](./assets/img/blog/owasp/OWASP-categories.png)
 
 ## Link: [OWASP Juice Shop](https://juice-shop-production-fbc0.up.railway.app/#/score-board)
 
