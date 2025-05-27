@@ -22,6 +22,9 @@ script_includes:
     {% endif %}
 
     <div class="post-meta text-muted">
+      <div class="d-flex justify-content-between align-items-center flex-wrap" style="padding-bottom:.75rem">
+	      <div class="d-flex flex-wrap gap-3">
+
       <!-- published date -->
       <span>
         {{ site.data.locales[lang].post.posted }}
@@ -35,6 +38,18 @@ script_includes:
           {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
         </span>
       {% endif %}
+      </div>
+
+      {% if page.layout == "post" %}
+              <div style="text-align:center;">
+                <applause-button
+                        style="width: 35px; height: 35px;"
+                        color="#20ff00"
+			url="{{ page.url }}">
+                </applause-button>
+        </div>
+      {% endif %}
+      </div>
 
       {% if page.image %}
         {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %}

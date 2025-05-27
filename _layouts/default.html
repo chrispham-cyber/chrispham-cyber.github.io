@@ -17,9 +17,8 @@ layout: compress
   {% include head.html %}
 
   <body>
-	<div id="google_translate_element"></div>
+  <!--<div id="google_translate_element"></div>-->
     {% include sidebar.html lang=lang %}
-
     <div id="main-wrapper" class="d-flex justify-content-center">
 
       <div class="container d-flex flex-column px-xxl-5">
@@ -86,10 +85,22 @@ layout: compress
     {% endfor %}
 
     {% include_cached search-loader.html lang=lang %}
-
+    
   </body>
 
 </html>
+
+<!-- Clap -->
+<link rel="stylesheet" href="/assets/css/applause-button.css"/>
+<script src="/assets/js/data/applause-button.js"></script>
+
+<script>
+  function resetClaps() {
+    // Replace this with the actual URL you used for the applause-button
+	  localStorage.removeItem('applause-button::{{ page.url }}');
+    location.reload(); // Optional: Refresh the page to reset the UI
+  }
+</script>
 
 <!-- Google tag (gtag.js) Analystic -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQ7VLRV853"></script>
@@ -105,7 +116,7 @@ layout: compress
         async src="https://gc.zgo.at/count.js">
 </script>
 
-<!-- Google Translate -->
+<!-- Google Translate 
 <script>
     function googleTranslateElementInit() {
         new google.translate.TranslateElement(
@@ -125,5 +136,5 @@ layout: compress
     		display: flex;
     		justify-content: flex-end; /* Aligns to the right */
 	}
-</style>
+</style>-->
 
