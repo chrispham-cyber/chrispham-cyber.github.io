@@ -19,6 +19,7 @@
   {% endif %}
 
   {{- content | markdownify | strip_html | newline_to_br | replace: '<br />', ' ' | strip_newlines -}}
+
 {%- endif -%}
 {%- endcapture -%}
 
