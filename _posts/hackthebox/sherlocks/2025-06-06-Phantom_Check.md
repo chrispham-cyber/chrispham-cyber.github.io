@@ -11,6 +11,24 @@ image:
 ### CHALLENGE DESCRIPTION
 Talion suspects that the threat actor carried out anti-virtualization checks to avoid detection in sandboxed environments. Your task is to analyze the event logs and identify the specific techniques used for virtualization detection. Byte Doctor requires evidence of the registry checks or processes the attacker executed to perform these checks.
 
+### SET UP
+```bash
+# 1. Create a Python virtual environment
+python3 -m venv myenv
+
+# 2. Activate the virtual environment
+source myenv/bin/activate   # For Linux/macOS
+
+# 3. Install the python-evtx library
+pip install python-evtx
+
+# 4. Download the evtx_dump.py script 
+wget https://raw.githubusercontent.com/williballenthin/python-evtx/master/scripts/evtx_dump.py
+
+# 5. Run the script on your .evtx file
+python3 evtx_dump.py some.evtx > log.xml
+```
+
 ### SOLUTION 
 
 After unzipping the file, we see lots of `evtx` files.

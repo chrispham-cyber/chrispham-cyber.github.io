@@ -11,6 +11,24 @@ image:
 ### CHALLENGE DESCRIPTION
 Byte Doctor Reyes is investigating a stealthy post-breach attack where several expected security logs and Windows Defender alerts appear to be missing. He suspects the attacker employed defense evasion techniques to disable or manipulate security controls, significantly complicating detection efforts. Using the exported event logs, your objective is to uncover how the attacker compromised the system's defenses to remain undetected.
 
+### SET UP
+```bash
+# 1. Create a Python virtual environment
+python3 -m venv myenv
+
+# 2. Activate the virtual environment
+source myenv/bin/activate   # For Linux/macOS
+
+# 3. Install the python-evtx library
+pip install python-evtx
+
+# 4. Download the evtx_dump.py script 
+wget https://raw.githubusercontent.com/williballenthin/python-evtx/master/scripts/evtx_dump.py
+
+# 5. Run the script on your .evtx file
+python3 evtx_dump.py some.evtx > log.xml
+```
+
 ### SOLUTION 
 
 After unzipping the file, we see lots of `evtx` files.
