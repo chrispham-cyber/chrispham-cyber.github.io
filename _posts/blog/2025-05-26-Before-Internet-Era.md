@@ -4,7 +4,6 @@ title:  "How Developers Coded Without Internet (And Still Cooked)"
 date:   2025-05-26 13:30:00 -0400
 categories: Blog
 tags: internet blog
-pin: true
 image:
     path: assets/img/blog/Before-Internet-Era/banner.jpg
 ---
