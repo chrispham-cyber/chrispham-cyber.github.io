@@ -2,8 +2,8 @@
 layout: post
 title:  "Oddly Even"
 date:   2025-04-11 16:10:00 -0400
-categories: HTB-challenge misc very-easy
-tags: HTB CTF writeup coding 
+categories: HTB-challenge coding very-easy
+tags: HTB CTF writeup 
 ---
 
 ### DESCRIPTION
