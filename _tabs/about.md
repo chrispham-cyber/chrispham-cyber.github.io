@@ -14,7 +14,9 @@ I started this blog as a way to document my experiences, challenges, and discove
 
 🥉  3rd Place in HackMiami XII 2025 
 
-🥉  3rd Place in Hack The Flag ISSA 2024
+🥉  3rd Place in Hack The Flag SFISSA 2024
+
+5th Place in Hack The Flag Advanced Mode 2025
 
 ### Certifications
 Miami Dade College - Associate in Science Cybersecurity - [Diploma](https://drive.google.com/file/d/17JDRAnqEfhfZ75Qxp4g5wmfq4viUQ0Sq/view?usp=sharing)

@@ -69,6 +69,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
 
     img {
       transition: transform 0.5s;
+      margin-top: -11px;
 
       &:hover {
         transform: scale(1.2);
