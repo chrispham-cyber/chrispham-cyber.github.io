@@ -4,7 +4,6 @@ title:  "Get To Know Your Computer"
 date:   2025-07-17 23:20:00 -0400
 categories: Blog Beginner
 tags: blog ssd hdd cpu gpu ram psu motherboard 
-pin: true
 image:
     path: assets/img/blog/Computer-Hardware/banner.png
 ---

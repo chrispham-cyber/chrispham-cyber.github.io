@@ -4,7 +4,6 @@ title:  "Connection Types And Their Functions"
 date:   2025-07-21 01:00:00 -0400
 categories: Blog Beginner
 tags: blog lan man wan pan ir nfc wifi bluetooth ethernet fiber 5g cellular
-pin: true
 image:
     path: assets/img/blog/Connection-Types/banner.png
 ---

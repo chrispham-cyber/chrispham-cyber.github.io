@@ -4,7 +4,6 @@ title:  "Basics of Computer Networking"
 date:   2025-07-24 01:20:00 -0400
 categories: Blog Beginner
 tags: blog tcp ip ipv4 ipv6 topologies network subnet dns
-pin: true
 image:
     path: assets/img/blog/Computer-Network/banner.jpg
 ---

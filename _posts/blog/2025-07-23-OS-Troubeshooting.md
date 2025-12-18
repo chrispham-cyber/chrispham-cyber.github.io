@@ -4,7 +4,6 @@ title:  "OS-Independent Troubleshooting: A Beginner's Guide To Fixing Tech"
 date:   2025-07-22 01:00:00 -0400
 categories: Blog Beginner
 tags: blog macos linux window
-pin: true
 image:
     path: assets/img/blog/OS-Troubleshooting/banner.jpg
 ---
