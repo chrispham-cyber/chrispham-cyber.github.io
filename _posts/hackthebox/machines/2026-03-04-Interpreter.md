@@ -5,7 +5,7 @@ date:   2026-03-04 10:30:00 -0400
 categories: HTB-machine linux medium
 tags: HTB CTF writeup 
 image:
-    #path: assets/img/htb/interpreter/banner.png
+    path: assets/img/htb/interpreter/banner.png
 ---
 
 ## 1/ Reconnaissance

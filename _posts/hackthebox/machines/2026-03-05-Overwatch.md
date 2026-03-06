@@ -5,7 +5,7 @@ date:   2026-03-05 20:30:00 -0400
 categories: HTB-machine window medium
 tags: HTB CTF writeup 
 image:
-    #path: assets/img/htb/overwatch/banner.png
+    path: assets/img/htb/overwatch/banner.png
 ---
 
 ## 1. Initial Recon
