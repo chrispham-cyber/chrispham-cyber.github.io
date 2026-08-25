@@ -4,7 +4,6 @@ title:  "Steal Credential With Keylogger"
 date:   2024-06-02 18:30:00 -0500
 categories: Blog Tools
 tags: blog python 
-pin: true
 image:
   path: /assets/img/blog/keylogger/keylogger-guide.jpg
 ---
