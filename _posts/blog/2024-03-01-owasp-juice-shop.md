@@ -9,9 +9,9 @@ image:
 ---
 
 ### Overview
-This project is a great resource for who looking to gain hands-on experience with web application security concepts and tools, covering a wide range of vulnerabilities such as SQL injection, Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF), and more. It offers challenges of varying difficulty levels, making it suitable for beginners as well as more experienced security professionals.
+This project is a good resource for anyone who wants hands-on experience with web application security. It covers vulnerabilities such as SQL injection, Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF), and more. It has challenges of different difficulty levels, so it works for beginners too.
 
-### Catagory of vulnerabilities
+### Category of vulnerabilities
 ![](./assets/img/blog/owasp/OWASP-categories.png)
 
 ## Link: [OWASP Juice Shop](https://juice-shop-production-fbc0.up.railway.app/#/score-board)
@@ -88,7 +88,7 @@ This project is a great resource for who looking to gain hands-on experience wit
 | ✓       | NoSQL Exfiltration            | All your orders are belong to us! Even the ones which don’t!                                     |
 | ✓       | NoSQL Manipulation            | Update multiple product reviews at the same time.                                                |
 | ✓       | Outdated Allowlist            | Let us redirect you to one of our crypto currency addresses which are not promoted any longer.    |
-| ✗       | Password Strength             | Log in with the administrator’s user credentials without previously changing them or applying SQL Injection. | Using `FUZZ` to brufe force with `default-passwords.txt` wordlist |
+| ✗       | Password Strength             | Log in with the administrator’s user credentials without previously changing them or applying SQL Injection. | Using `FUZZ` to brute force with `default-passwords.txt` wordlist |
 | ✓       | Payback Time                  | Place an order that makes you rich.                                                                |
 | ✓       | Poison Null Byte              | Bypass a security control with a Poison Null Byte to access a file not meant for your eyes.      |
 | ✓       | Premium Paywall               | Unlock Premium Challenge to access exclusive content.                                             |

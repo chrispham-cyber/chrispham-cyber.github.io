@@ -8,11 +8,11 @@ image:
     path: assets/img/blog/Computer-Hardware/banner.png
 ---
 
-If you’re diving into cybersecurity, whether you dream of becoming a hacker, defender, or forensics wizard you need to understand the machine you’re working with.
+If you want to get into cybersecurity, you need to understand the machine you’re working with.
 
-Before you start popping shells or analyzing malware, take a moment to understand **how a computer actually works under the hood**. Think of it like learning how a car engine runs before you become a mechanic or racer.
+Before popping shells or analyzing malware, I think it helps to know how a computer actually works. It’s like learning how a car engine runs before becoming a mechanic.
 
-Let’s break down the key hardware components in a beginner friendly way.
+Here are the main hardware components, explained simply.
 
 Table of contents:
 * [CPU](#central-processing-unit-cpu)
@@ -40,7 +40,7 @@ Understanding CPU usage can help you detect things like **cryptojacking** or **m
 ## Motherboard 
 ![](assets/img/blog/Computer-Hardware/2.jpg)
 
-The **motherboard** connects all parts of the computer together: CPU, RAM, storage, GPU, and more. It’s basically the “circuit board highway” for your computer.
+The **motherboard** connects all parts of the computer together: CPU, RAM, storage, GPU, and more. It’s basically the main circuit board of your computer.
 
 * Every component plugs into it.
 * It handles communication between hardware parts.
@@ -121,11 +121,11 @@ GPUs are used in brute-force attacks and hash cracking. Knowing GPU limits helps
 
 ## Why This Matters for Cybersecurity
 
-Understanding hardware isn’t just for PC builders, it’s essential for cybersecurity:
+Understanding hardware isn’t just for PC builders, it helps in cybersecurity too:
 
 * Knowing where data is stored = better forensic investigations.
 * Knowing what can be attacked = stronger defenses.
-* Understanding how hardware interacts = smarter hacking.
+* Understanding how hardware interacts = better hacking.
 
 Think of it this way:
 
@@ -133,7 +133,7 @@ Think of it this way:
 
 ## Final Thoughts
 
-You don’t need to memorize every wire and chip. But knowing what each piece does helps you become a better analyst, pentester, or engineer.
+You don’t need to memorize every wire and chip. But knowing what each piece does helps.
 
 If you’re just getting started:
 
@@ -141,6 +141,4 @@ If you’re just getting started:
 * Identify each part based on this guide.
 * Try tools like **Speccy**, **CPU-Z**, or even Linux commands (`lshw`, `lsblk`, etc.) to inspect your system.
 
-Stay curious, stay safe and remember: **every hacker was a beginner once.**
-
-Happy Hacking!!!
+I'm still a beginner too.

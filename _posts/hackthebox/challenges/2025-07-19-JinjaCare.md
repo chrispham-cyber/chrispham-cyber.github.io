@@ -7,7 +7,7 @@ tags: HTB CTF writeup web
 ---
 
 ### Solutions
-As you can see the title of the challenge, we will notice that this challenge is about `SSTI`, so let try `${7*'7'}}` in any input form.
+As you can see the title of the challenge, we will notice that this challenge is about `SSTI`, so let's try `${7*'7'}}` in any input form.
 
 But first, we need to register account.
 ![](assets/img/htb/JinjaCare/1.png)

@@ -73,7 +73,7 @@ We will see some non-default ports there.
 tls.handshake.certificate
 ```
 
-We will see `Sever Key Exchange`, analyze the first packet > Transport Layer Security > Handshake protocol > Certificates > Certificate > Issuer > id-at-localityName.
+We will see `Server Key Exchange`, analyze the first packet > Transport Layer Security > Handshake protocol > Certificates > Certificate > Issuer > id-at-localityName.
 
 <details>
 <summary><b>Answer</b></summary>
@@ -91,7 +91,7 @@ Transport Layer Security > Handshake protocol > Certificates > Certificate > val
 
 **What was the domain used for tunneling?**
 
-Search `DNS` and we will see the domain on the Info colunm.
+Search `DNS` and we will see the domain on the Info column.
 
 <details>
 <summary><b>Answer</b></summary>

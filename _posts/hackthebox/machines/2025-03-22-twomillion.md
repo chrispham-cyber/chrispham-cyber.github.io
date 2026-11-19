@@ -9,7 +9,7 @@ image:
 ---
 
 # Writeup
-After scanning, we know how many ports are openned.
+After scanning, we know how many ports are open.
 ![](assets/img/htb/twomillion/scan.png)
 
 After accessing IP, it redirects us to this domain.

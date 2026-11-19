@@ -15,17 +15,17 @@ msg.enc
 ```
 
 ### SOLUTION 
-To decrypt the message that was encrypted using the provided encryption function, we need to reverse the encryption process. The encryption function applies a linear transformation to each character in the message, specifically:
+To decrypt the message, we need to reverse the encryption function. It changes each character like this:
 
 `ct = (123 \times \text{char} + 18) \mod 256`
 
-To decrypt, we need to find the inverse of this transformation. The decryption process can be broken down into the following steps:
+So to decrypt, we undo it:
 
 - Subtract 18 from the ciphertext value.
 - Multiply by the modular inverse of 123 modulo 256.
 
 ### Finding the Modular Inverse
-To find the modular inverse of 123 modulo 256, we can use the Extended Euclidean Algorithm. The modular inverse ( x ) of ( a ) modulo ( m ) satisfies:
+We can get the modular inverse of 123 modulo 256 with the Extended Euclidean Algorithm. The inverse x of a modulo m is the number where:
 
 `a \times x \equiv 1 \mod m`
 

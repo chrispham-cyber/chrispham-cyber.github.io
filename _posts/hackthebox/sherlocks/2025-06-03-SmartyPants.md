@@ -65,7 +65,7 @@ Oh wow, It shows lots of trash info, let filter it out, we can see executionTime
 grep -i executionTime log
 ```
 
-Feel better now, now lool at the output, what is the first tool attacker downloaded? 
+Feel better now, now look at the output, what is the first tool attacker downloaded? 
 
 <details>
 <summary><b>Answer</b></summary>
@@ -100,7 +100,7 @@ We need to see around that line.
 grep -i document log
 ```
 
-copy the path and delete backsplash.
+copy the path and delete backslash.
 
 <details>
 <summary><b>Answer</b></summary>

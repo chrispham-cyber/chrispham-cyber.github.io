@@ -47,7 +47,7 @@ echo '10.129.231.103 sightless.htb' | sudo tee -a /etc/hosts
 10.129.231.103 sightless.htb
 ```
 
-Browse the web manually, we will find subdomain. We can see its version in `About` tab in subdomain. Clone CVE and exlpoit the machine.
+Browse the web manually, we will find subdomain. We can see its version in `About` tab in subdomain. Clone CVE and exploit the machine.
 ```bash
 git clone https://github.com/0xRoqeeb/sqlpad-rce-exploit-CVE-2022-0944.git 
 ```

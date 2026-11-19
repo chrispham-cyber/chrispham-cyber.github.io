@@ -13,6 +13,6 @@ tags: pico CTF writeup
 We are provided `nc verbal-sleep.picoctf.net 57819` to connect to the server.
 
 What we need to do is:
-- Use `hashid` to indentify the hash type.
+- Use `hashid` to identify the hash type.
 - Use `hashcat -h | grep [Hash Type]` to find Hash option
 - Use `hashcat -m [option] [hash] [wordlist]` to crack hash

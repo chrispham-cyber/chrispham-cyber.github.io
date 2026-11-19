@@ -8,10 +8,9 @@ image:
     path: assets/img/blog/Connection-Types/banner.png
 ---
 
-If you're just getting started in cybersecurity, one of the first things to understand is how devices connect to each other. Whether it's your phone syncing with earbuds or a laptop connecting to the internet, every connection can be a potential attack point.
+One of the first things to understand in cybersecurity is how devices connect to each other. Your phone syncing with earbuds or a laptop connecting to the internet, every connection can be a potential attack point.
 
-This blog breaks down the most common connection types, what they do, and why they matter in cybersecurity.
-Let’s get into it.
+This blog covers the most common connection types, what they do, and why they matter in cybersecurity.
 
 Table of Contents:
 * [Ethernet](#ethernet)
@@ -28,7 +27,7 @@ Table of Contents:
 ## Ethernet
 ![](assets/img/blog/Connection-Types/1.jpg)
 Ethernet is the classic wired connection that plugs into your computer or router using an Ethernet cable:
-* Super stable and fast
+* Stable and fast
 * Great for gaming, streaming, or business networks
 * Used in most corporate environments
 
@@ -117,22 +116,20 @@ Notes:
 * Limited use = limited risk, but don’t ignore it entirely if you're in sensitive environments
 
 ## Why This Stuff Matters in Cybersecurity
-Every connection type you use opens a door. As a cybersecurity professional, your job is to know which doors are open, which are locked, and which are being picked.
+Every connection type you use is a possible way in for attackers. Someone doing security needs to know which ones are open and which are locked.
 
-Here’s what to focus on:
+What to focus on:
 * Use strong encryption on all connections
 * Disable what you’re not using 
 * Understand how attackers abuse public or wireless networks
 * Always ask: “If I was an attacker, how would I exploit this connection?”
 
 ## Final Thoughts
-Your journey in cybersecurity starts with understanding the basic ways devices communicate. Once you know how connections work, you can better secure them, monitor them, and break into them.
+Understanding the basic ways devices communicate is a good start. Once you know how connections work, you can better secure and monitor them.
 
-Take Action:
+Things to try:
 * Check your Wi-Fi settings. Are you using WPA3?
 * Go through your phone and disable unused connections (Bluetooth, NFC)
 * Try packet-sniffing your Wi-Fi with Wireshark
 
-Stay curious, stay safe, and remember every packet tells a story.
 
-Happy Hacking!

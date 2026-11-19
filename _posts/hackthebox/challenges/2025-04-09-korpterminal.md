@@ -7,10 +7,10 @@ tags: HTB CTF writeup sqlmap hashcat
 ---
 
 ### SOLUTION
-We can see the login page at first, let try some SQL injection. But nothing happend, so we need to inspect it and save the request to a file.
+We can see the login page at first, let's try some SQL injection. But nothing happened, so we need to inspect it and save the request to a file.
 ![](assets/img/htb/korpterminal/1.png)
 
-Using `sqlmap` to find the web's databse
+Using `sqlmap` to find the web's database
 ```bash
 sqlmap -r request.txt --ignore-code 401 --dump --batch
 ```

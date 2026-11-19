@@ -9,7 +9,7 @@ image:
     path: assets/img/blog/SetupSplunk/banner.jpg
 ---
 
-This blog is for anyone who love hacking and don't know how to setup SIEM Homelab (Splunk). 
+This blog is for anyone who loves hacking and doesn't know how to set up a SIEM homelab (Splunk).
 
 ## Download Splunk 
 
@@ -35,10 +35,8 @@ press `Space` to read all license and type `y` to continue.
 
 set username and password (at least 8 characters)
 
-wait a few minutes, it will gives you a link, open it.
+wait a few minutes, it will give you a link, open it.
 
 ![](assets/img/blog/SetupSplunk/1.png)
 
 Source: [How to setup Splunk](https://www.youtube.com/watch?v=Tox5L_QCiKw)
-
-Happy hacking!

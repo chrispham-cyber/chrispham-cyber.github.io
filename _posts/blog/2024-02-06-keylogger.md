@@ -11,7 +11,7 @@ image:
 ## Overview
 This project is a **keystroke logger** that captures and records the keys pressed on the keyboard, logging them into a file named **keystrokes.log**. It processes each key press event to handle specific actions, such as backspace, special characters, and modifier keys (Ctrl, Shift, Alt), and writes the corresponding character to a log file.
 
-This project is useful for purposes such as creating simple keystroke logging applications, debugging, or testing keyboard input behavior. 
+It can be used for simple keystroke logging apps, debugging, or testing keyboard input.
 
 ## Demo
 ![demo](./assets/img/blog/keylogger/demo.gif)
@@ -83,12 +83,12 @@ keyboard.wait()
 ```
 
 ## How to use
-To run the script, using 
+To run the script, use
 ```bash
 sudo python3 keylogger.py &
 ```
 
-To view the log, using
+To view the log, use
 ```bash
 cat keystrokes.log
 ```

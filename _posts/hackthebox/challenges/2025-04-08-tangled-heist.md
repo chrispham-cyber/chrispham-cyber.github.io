@@ -23,7 +23,7 @@ We can get this from Ques1.
 
 **Q4: How many failed login attempts are recorded on the user account named 'Ranger'? (for example: 6)**
 
-After doing some researchs, we know that `badPwdCount` used for number of times the user tried to log on to the account using an incorrect password.
+After doing some research, we know that `badPwdCount` used for number of times the user tried to log on to the account using an incorrect password.
 
 Search `ldap contains "badPwdCount" and ldap contains "Ranger"` **case sensitive**
 ![](assets/img/htb/tangled-heist/3.png)
@@ -64,7 +64,7 @@ We can see `addRequest` and `modifyRequest`, analyze it.
 Look up for `Hurricane` username and we see `KRB5` protocol.
 ![](assets/img/htb/tangled-heist/9.png)
 
-Export packet to `PDML` file. PDML files are a powerful way to export and analyze packet capture data from Wireshark. They provide a structured format that can be easily processed and integrated with other tools, making them valuable for network analysis and reporting.
+Export packet to `PDML` file. PDML is a structured format for Wireshark packet data, so other tools can read it easily.
 ![](assets/img/htb/tangled-heist/10.png)
 
 Convert it to `krb` hash by `krb2john` and crack it with `john`

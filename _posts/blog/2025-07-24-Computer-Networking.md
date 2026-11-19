@@ -8,9 +8,9 @@ image:
     path: assets/img/blog/Computer-Network/banner.jpg
 ---
 
-Let’s face it, if you’re diving into cybersecurity without understanding how devices actually talk to each other, you’re flying blind. Networks are the battlefield of modern cyber warfare, and if you want to defend systems, you need to know what’s under the hood.
+If you want to learn cybersecurity, you need to understand how devices talk to each other. Almost every attack goes through a network, and to defend systems you need to know how they work.
 
-So, let’s break down the basics of computer networking, no boring textbook talk, just real-world knowledge you actually need.
+These are my notes on the basics of computer networking.
 
 Table of Contents:
 * [What Is Computer Networking](#what-is-computer-networking)
@@ -25,7 +25,7 @@ Table of Contents:
 
 ## What Is Computer Networking?
 Computer networking is simply connecting computers and devices so they can share information. Think file sharing, streaming Netflix, sending emails, or launching a DDoS attack.
-Because almost every cyber attack, malware, phishing, ransomware, MITM, sniffing, rides on a network. Knowing how data flows helps you intercept, analyze, and protect it.
+Almost every cyber attack (malware, phishing, ransomware, MITM, sniffing) goes through a network. Knowing how data flows helps you intercept, analyze, and protect it.
 
 ## TCP/IP 
 
@@ -61,7 +61,7 @@ Both devices help move data across networks, but they play very different roles.
 ### Router:
 * Connects different networks together 
 * Forwards data based on IP addresses
-* Acts as the border guard between your LAN and the big, bad web
+* Acts as the border between your LAN and the internet
 
 Note:
 A compromised switch? Internal chaos.  A compromised router? External access, your whole network could be exposed.
@@ -115,7 +115,7 @@ Use DNS filtering and secure DNS protocols to add protection.
 
 ![](assets/img/blog/Computer-Network/4.png)
 
-If you build a network and don’t secure it, attackers will treat it like an open buffet.
+If you build a network and don’t secure it, attackers can get in easily.
 
 | Security Measure                | What It Does                               |
 | ------------------------------- | ------------------------------------------ |
@@ -127,10 +127,10 @@ If you build a network and don’t secure it, attackers will treat it like an op
 
 Security should be built into the network, not added as an afterthought.
 
-## Why Networking Knowledge Makes You Dangerous
-Whether you want to become a pen tester, SOC analyst, blue teamer, or red teamer, you’ll constantly interact with networks.
+## Why Networking Knowledge Matters
+Whatever role you end up in (pen tester, SOC analyst, blue team, red team), you will work with networks a lot.
 
-Here’s why understanding networking is:
+Here’s why understanding networking helps:
 * You can trace threats across connections
 * You can analyze packet data with tools like Wireshark
 * You can identify misconfigs that open doors to attackers
@@ -144,8 +144,4 @@ Try these beginner friendly labs and exercises:
 * Set up a virtual firewall and block/allow specific ports
 
 ## Final Thoughts
-Networking isn’t just wires and blinking lights, it’s the circulatory system of cybersecurity. Master it, and you’ll understand how attackers move, how defenders stop them, and how the entire internet operates.
-
-So don’t skip the fundamentals, this is your tactical edge.
-
-Happy Hacking!
+Networking isn’t just wires and blinking lights. If you understand it, you can see how attackers move and how defenders stop them. I don't want to skip the fundamentals.

@@ -15,9 +15,9 @@ The SOC team has recently been alerted to the potential existence of an insider 
 
 **When did the suspect first start Direct Message (DM) conversations with the external entity (A possible threat actor group which targets organizations by paying employees to leak sensitive data)? (UTC)**
 
-Let try `exiftool` on both files, try to input the date we have. But nothing happed.
+Let try `exiftool` on both files, try to input the date we have. But nothing happened.
 
-So I serach on Google and find out that there is a `URL forensic` called [Unfurl](https://dfir.blog/unfurl/)
+So I searched on Google and find out that there is a `URL forensic` called [Unfurl](https://dfir.blog/unfurl/)
 
 So we have 2 links in `IOC.txt`, let analyze them. Copy and paste first link
 
