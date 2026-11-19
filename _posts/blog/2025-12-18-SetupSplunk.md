@@ -4,6 +4,7 @@ title:  "Setup Splunk on Kali"
 date:   2025-12-18 01:20:00 -0400
 categories: Blog Beginner
 tags: blog setup kali-linux splunk SIEM lab
+pin: true
 image:
     path: assets/img/blog/SetupSplunk/banner.jpg
 ---

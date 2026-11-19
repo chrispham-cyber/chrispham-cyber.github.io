@@ -2,7 +2,7 @@
 layout: post
 title:  "Threat Index"
 date:   2025-07-04 09:10:00 -0400
-categories: HTB-challenge very-easy
+categories: HTB-challenge coding very-easy
 tags: HTB CTF writeup coding 
 ---
 

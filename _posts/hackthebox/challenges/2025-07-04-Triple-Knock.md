@@ -2,7 +2,7 @@
 layout: post
 title:  "Triple Knock"
 date:   2025-07-04 17:10:00 -0400
-categories: HTB-challenge easy
+categories: HTB-challenge coding easy
 tags: HTB CTF writeup coding 
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "JinjaCare"
 date:   2025-07-19 17:10:00 -0400
-categories: HTB-challenge very-easy
+categories: HTB-challenge web very-easy
 tags: HTB CTF writeup web
 ---
 

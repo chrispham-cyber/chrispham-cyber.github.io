@@ -2,7 +2,7 @@
 layout: post
 title:  "Overwatch"
 date:   2026-03-05 20:30:00 -0400
-categories: HTB-machine window medium
+categories: HTB-machine windows medium
 tags: HTB CTF writeup 
 image:
     path: assets/img/htb/overwatch/banner.png

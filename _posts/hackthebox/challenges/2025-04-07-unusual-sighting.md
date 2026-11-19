@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "An Unsual Sighting"
+title:  "An Unusual Sighting"
 date:   2025-04-07 12:00:00 -0400
 categories: HTB-challenge forensics very-easy
 tags: HTB CTF writeup log 
